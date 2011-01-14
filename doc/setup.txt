@@ -3,6 +3,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_indexedsearch.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_macinasearchbox_pi1.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_ddgooglesitemap.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_rlmplanguagedetection_pi1.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/tt_content.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.stdheader.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/config.ts">
