@@ -75,7 +75,7 @@ for i in ['fileadmin', 'typo3conf', 'typo3temp', 'uploads']:
     os.system("chmod -R g+w %s" % (os.path.join('html', i)))
 
 # touch enable_install_tool
-open('html/typo3conf/TOUCH_ENABLE_INSTALL', 'w').close()
+open('html/typo3conf/ENABLE_INSTALL_TOOL', 'w').close()
 
 installpw = generate_pw()
 
