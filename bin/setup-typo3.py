@@ -82,6 +82,10 @@ installpw = generate_pw()
 replace_in_file(r"\$TYPO3_CONF_VARS\['BE'\]\['installToolPassword'\] =", "$TYPO3_CONF_VARS['BE']['installToolPassword'] = '%s';\n" % (md5(installpw)), 'html/typo3conf/localconf.php')
 
 
+# todo:
+# set dpi
+# set gdlib png
+# set forceCharset = utf-8
 
 
 f = open('doc/accounts', 'w')
