@@ -1,0 +1,19 @@
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.automaketemplate.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tt_news.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_indexedsearch.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_macinasearchbox_pi1.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_ddgooglesitemap.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/tt_content.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.stdheader.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.mainMenu.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.content.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.border.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.left.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.right.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.editableFooter.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.searchForm.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/i18n.ts">
+
+config.no_cache = 1
