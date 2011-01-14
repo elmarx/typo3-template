@@ -104,9 +104,6 @@ contentpage {
 
 	# cat=contentpage; type=int+; label= PID of the contact page
 	contactPid = 
-
-	# cat=contentpage; type=int+; label= PID of the search target
-	searchTargetPid =
 }
 
 #plugin.backgroundimage {

@@ -14,5 +14,5 @@ plugin.tx_indexedsearch {
 		}
 
 	search.targetPid >
-	search.targetPid = {$contentpage.searchTargetPid}
+	search.targetPid = {$plugin.tx_indexedsearch.searchpageID}
 }
