@@ -103,7 +103,7 @@ contentpage {
 	imprintPid = 
 
 	# cat=contentpage; type=int+; label= PID of the contact page
-	contactPid = 8
+	contactPid = 
 
 	# cat=contentpage; type=int+; label= PID of the search target
 	searchTargetPid =
