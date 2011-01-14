@@ -1,0 +1,8 @@
+mod.SHARED.defaultLanguageLabel = Deutsch
+mod.SHARED.defaultLanguageFlag = de.gif
+
+TCEFORM.tt_content{
+		section_frame.addItems {
+				#50 = LABEL
+		}
+}
