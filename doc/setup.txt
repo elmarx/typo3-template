@@ -4,9 +4,11 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_macinasearchbox_pi1.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_ddgooglesitemap.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_rlmplanguagedetection_pi1.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/config.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/tt_content.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.stdheader.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.defaultMenu.ts">
+
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.mainMenu.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.content.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.border.ts">
