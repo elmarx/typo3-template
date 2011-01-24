@@ -6,7 +6,7 @@ import subprocess
 import tempfile
 import hashlib
 
-TYPO3_VERSION = "4.4.6"
+TYPO3_VERSION = "4.5.0"
 TYPO3_X_VERSION = re.sub(r'\d+$', 'x', TYPO3_VERSION)
 GROUP = "www-data"
 
