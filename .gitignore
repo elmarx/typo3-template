@@ -1,5 +1,3 @@
-public_html/typo3conf/temp_*
-public_html/typo3conf/ENABLE_INSTALL_TOOL
 .idea/workspace.xml
 
 *.swp
