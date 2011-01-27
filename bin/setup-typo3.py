@@ -54,7 +54,10 @@ try:
     os.symlink("typo3_src-%s" % TYPO3_VERSION, "typo3_src-%s" % (TYPO3_X_VERSION))
 except:
     pass
-os.unlink("html/typo3_src")
+try:
+    os.unlink("html/typo3_src")
+except:
+    pass
 os.symlink("../typo3_src-%s" % (TYPO3_X_VERSION), "html/typo3_src")
 
 # cleanup typo3 folder
