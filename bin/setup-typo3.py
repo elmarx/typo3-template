@@ -7,12 +7,13 @@ import tempfile
 import hashlib
 
 TYPO3_VERSION = "4.5.0"
+TYPO3_DOWNLOAD_URL = "http://dl1.typo3.org/TYPO3_4.5.0/"
 TYPO3_X_VERSION = re.sub(r'\d+$', 'x', TYPO3_VERSION)
 GROUP = "www-data"
 
 def generate_pw():
-    makepasswd = subprocess.Popen("makepasswd", stdout=subprocess.PIPE)
-    return re.sub(r'\n$', '', makepasswd.stdout.read().decode())
+    pw = subprocess.Popen(["pwgen", '8', '1'], stdout=subprocess.PIPE)
+    return re.sub(r'\n$', '', pw.stdout.read().decode())
 
 def md5(value):
     m = hashlib.md5()
@@ -43,11 +44,11 @@ if not os.path.isdir('html'):
 
 # download typo3 src
 if not os.path.isdir('typo3_src-%s' % (TYPO3_VERSION)):
-    os.system("wget -qO - http://prdownloads.sourceforge.net/typo3/typo3_src-%s.tar.gz?download | tar xzf -" % (TYPO3_VERSION))
+    os.system("wget -qO - %(url)stypo3_src-%(version)s.tar.gz | tar xzf -" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # download typo3 dummy
-if not os.path.isdir('html/typo3conf'):
-    os.system("wget -qO - http://prdownloads.sourceforge.net/typo3/dummy-%s.tar.gz?download | tar xzf - -C html/ --strip 1" % (TYPO3_VERSION))
+if not os.path.exists('html/typo3conf/localconf.php'):
+    os.system("wget -qO - %(url)s/dummy-%(version)s.tar.gz | tar xzf - -C html/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # create the proper symlinks
 try:
