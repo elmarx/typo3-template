@@ -39,7 +39,7 @@ def replace_in_file(pattern, replace, filename):
     f.close()
 
 # are we in our typo3template folder?
-if not os.path.isdir('html'):
+if not os.path.isdir('html/cms'):
     sys.exit()
 
 # download typo3 src
@@ -47,8 +47,8 @@ if not os.path.isdir('typo3_src-%s' % (TYPO3_VERSION)):
     os.system("wget -qO - %(url)stypo3_src-%(version)s.tar.gz | tar xzf -" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # download typo3 dummy
-if not os.path.exists('html/typo3conf/localconf.php'):
-    os.system("wget -qO - %(url)s/dummy-%(version)s.tar.gz | tar xzf - -C html/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
+if not os.path.exists('html/cms/typo3conf/localconf.php'):
+    os.system("wget -qO - %(url)s/dummy-%(version)s.tar.gz | tar xzf - -C html/cms/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # create the proper symlinks
 try:
@@ -56,34 +56,34 @@ try:
 except:
     pass
 try:
-    os.unlink("html/typo3_src")
+    os.unlink("html/cms/typo3_src")
 except:
     pass
-os.symlink("../typo3_src-%s" % (TYPO3_X_VERSION), "html/typo3_src")
+os.symlink("../typo3_src-%s" % (TYPO3_X_VERSION), "html/cms/typo3_src")
 
 # cleanup typo3 folder
-for i in [os.path.join('html', x) for x in ['clear.gif', 'INSTALL.txt', 'README.txt', 'RELEASE_NOTES.txt']]:
+for i in [os.path.join('html/cms', x) for x in ['clear.gif', 'INSTALL.txt', 'README.txt', 'RELEASE_NOTES.txt']]:
     try:
         os.unlink(i)
     except:
         pass
 
 try:
-    os.rename("html/_.htaccess", "html/.htaccess")
+    os.rename("html/cms/_.htaccess", "html/cms/.htaccess")
 except:
     pass
 
 # make the typical typo3 folders writeable
 for i in ['fileadmin', 'typo3conf', 'typo3temp', 'uploads']:
-    os.system("chgrp -R %s %s" % (GROUP, os.path.join('html', i)))
-    os.system("chmod -R g+w %s" % (os.path.join('html', i)))
+    os.system("chgrp -R %s %s" % (GROUP, os.path.join('html/cms', i)))
+    os.system("chmod -R g+w %s" % (os.path.join('html/cms', i)))
 
 # touch enable_install_tool
-open('html/typo3conf/ENABLE_INSTALL_TOOL', 'w').close()
+open('html/cms/typo3conf/ENABLE_INSTALL_TOOL', 'w').close()
 
 installpw = generate_pw()
 
-replace_in_file(r"\$TYPO3_CONF_VARS\['BE'\]\['installToolPassword'\] =", "$TYPO3_CONF_VARS['BE']['installToolPassword'] = '%s';\n" % (md5(installpw)), 'html/typo3conf/localconf.php')
+replace_in_file(r"\$TYPO3_CONF_VARS\['BE'\]\['installToolPassword'\] =", "$TYPO3_CONF_VARS['BE']['installToolPassword'] = '%s';\n" % (md5(installpw)), 'html/cms/typo3conf/localconf.php')
 
 
 # todo:
