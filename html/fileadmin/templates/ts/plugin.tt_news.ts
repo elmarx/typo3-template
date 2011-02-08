@@ -79,6 +79,7 @@ plugin.tt_news {
 	displaySingle {
 		date_stdWrap.strftime = {$plugin.tt_news.dateformat}
 		time_stdWrap.strftime = {$plugin.tt_news.timeformat}
+		age_stdWrap.age = Minuten| Stunden| Tage| Jahr(e)
 	}
 	displayLatest {
 		date_stdWrap.strftime = {$plugin.tt_news.dateformat}
