@@ -1,5 +1,8 @@
 page = PAGE    
 page {
+
+		headTag = <head><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+
 		# Regular pages always have typeNum = 0
 		typeNum = 0
 
