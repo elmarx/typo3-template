@@ -6,8 +6,8 @@ import subprocess
 import tempfile
 import hashlib
 
-TYPO3_VERSION = "4.5.0"
-TYPO3_DOWNLOAD_URL = "http://dl1.typo3.org/TYPO3_4.5.0/"
+TYPO3_VERSION = "4.5.1"
+TYPO3_DOWNLOAD_URL = "http://dl1.typo3.org/TYPO3_4.5.1/"
 TYPO3_X_VERSION = re.sub(r'\d+$', 'x', TYPO3_VERSION)
 GROUP = "www-data"
 
