@@ -89,8 +89,6 @@ replace_in_file(r"\$TYPO3_CONF_VARS\['BE'\]\['installToolPassword'\] =", "$TYPO3
 # todo:
 # set dpi
 # set gdlib png
-# set forceCharset = utf-8
-
 
 f = open('files/doc/accounts', 'w')
 f.write("""
