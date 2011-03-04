@@ -6,8 +6,8 @@ import subprocess
 import tempfile
 import hashlib
 
-TYPO3_VERSION = "4.5.1"
-TYPO3_DOWNLOAD_URL = "http://dl1.typo3.org/TYPO3_4.5.1/"
+TYPO3_VERSION = "4.5.2"
+TYPO3_DOWNLOAD_URL = "http://prdownloads.sourceforge.net/typo3/"
 TYPO3_X_VERSION = re.sub(r'\d+$', 'x', TYPO3_VERSION)
 GROUP = "www-data"
 
@@ -43,8 +43,8 @@ if not os.path.isdir('html/cms'):
     sys.exit()
 
 # download typo3 src
-if not os.path.isdir('typo3_src-%s' % (TYPO3_VERSION)):
-    os.system("wget -qO - %(url)stypo3_src-%(version)s.tar.gz | tar xzf -" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
+if not os.path.isdir('files/typo3_src-%s' % (TYPO3_VERSION)):
+    os.system("wget -qO - %(url)stypo3_src-%(version)s.tar.gz | tar xzf - -C files" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # download typo3 dummy
 if not os.path.exists('html/cms/typo3conf/localconf.php'):
@@ -52,14 +52,14 @@ if not os.path.exists('html/cms/typo3conf/localconf.php'):
 
 # create the proper symlinks
 try:
-    os.symlink("typo3_src-%s" % TYPO3_VERSION, "typo3_src-%s" % (TYPO3_X_VERSION))
+    os.symlink("files/typo3_src-%s" % TYPO3_VERSION, "files/typo3_src-%s" % (TYPO3_X_VERSION))
 except:
     pass
 try:
     os.unlink("html/cms/typo3_src")
 except:
     pass
-os.symlink("../typo3_src-%s" % (TYPO3_X_VERSION), "html/cms/typo3_src")
+os.symlink("../files/typo3_src-%s" % (TYPO3_X_VERSION), "html/cms/typo3_src")
 
 # cleanup typo3 folder
 for i in [os.path.join('html/cms', x) for x in ['clear.gif', 'INSTALL.txt', 'README.txt', 'RELEASE_NOTES.txt']]:
@@ -92,7 +92,7 @@ replace_in_file(r"\$TYPO3_CONF_VARS\['BE'\]\['installToolPassword'\] =", "$TYPO3
 # set forceCharset = utf-8
 
 
-f = open('doc/accounts', 'w')
+f = open('files/doc/accounts', 'w')
 f.write("""
 Installtool:
 %s
