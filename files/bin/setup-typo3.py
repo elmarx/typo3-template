@@ -52,14 +52,14 @@ if not os.path.exists('html/cms/typo3conf/localconf.php'):
 
 # create the proper symlinks
 try:
-    os.symlink("files/typo3_src-%s" % TYPO3_VERSION, "files/typo3_src-%s" % (TYPO3_X_VERSION))
+    os.symlink("typo3_src-%s" % TYPO3_VERSION, "files/typo3_src-%s" % (TYPO3_X_VERSION))
 except:
     pass
 try:
     os.unlink("html/cms/typo3_src")
 except:
     pass
-os.symlink("../files/typo3_src-%s" % (TYPO3_X_VERSION), "html/cms/typo3_src")
+os.symlink("../../files/typo3_src-%s" % (TYPO3_X_VERSION), "html/cms/typo3_src")
 
 # cleanup typo3 folder
 for i in [os.path.join('html/cms', x) for x in ['clear.gif', 'INSTALL.txt', 'README.txt', 'RELEASE_NOTES.txt']]:
