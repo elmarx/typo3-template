@@ -17,6 +17,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.editableFooter.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.searchForm.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/page.ajax.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/i18n.ts">
 
 config.no_cache = 1
