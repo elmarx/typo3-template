@@ -1,6 +1,6 @@
 tt_content.stdWrap.innerWrap.cObject {
 	#50 =< tt_content.stdWrap.innerWrap.cObject.default
-	#50.15.value = DESCRIPTION
+	#50.15.value = className
 }
 
 #tt_content.mailform.20{
