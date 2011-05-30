@@ -6,10 +6,10 @@ import subprocess
 import tempfile
 import hashlib
 
-TYPO3_VERSION = "4.5.2"
+TYPO3_VERSION = "4.5.3"
 TYPO3_DOWNLOAD_URL = "http://prdownloads.sourceforge.net/typo3/"
 TYPO3_X_VERSION = re.sub(r'\d+$', 'x', TYPO3_VERSION)
-GROUP = "www-data"
+GROUP = "apache"
 
 def generate_pw():
     pw = subprocess.Popen(["pwgen", '8', '1'], stdout=subprocess.PIPE)
