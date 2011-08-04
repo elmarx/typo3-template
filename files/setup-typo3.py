@@ -43,23 +43,23 @@ if not os.path.isdir('html/cms'):
     sys.exit()
 
 # download typo3 src
-if not os.path.isdir('files/typo3_src-%s' % (TYPO3_VERSION)):
-    os.system("wget -qO - %(url)stypo3_src-%(version)s.tar.gz | tar xzf - -C files" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
+if not os.path.isdir('html/typo3_src-%s' % (TYPO3_VERSION)):
+    os.system("wget -qO - %(url)stypo3_src-%(version)s.tar.gz | tar xzf - -C html" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # download typo3 dummy
 if not os.path.exists('html/cms/typo3conf/localconf.php'):
-    os.system("wget -qO - %(url)s/blankpackage-%(version)s.tar.gz | tar xzf - -C html/cms/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
+    os.system("wget -qO - %(url)s/dummy-%(version)s.tar.gz | tar xzf - -C html/cms/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # create the proper symlinks
 try:
-    os.symlink("typo3_src-%s" % TYPO3_VERSION, "files/typo3_src-%s" % (TYPO3_X_VERSION))
+    os.symlink("typo3_src-%s" % TYPO3_VERSION, "html/typo3_src-%s" % (TYPO3_X_VERSION))
 except:
     pass
 try:
     os.unlink("html/cms/typo3_src")
 except:
     pass
-os.symlink("../../files/typo3_src-%s" % (TYPO3_X_VERSION), "html/cms/typo3_src")
+os.symlink("../html/typo3_src-%s" % (TYPO3_X_VERSION), "html/cms/typo3_src")
 
 # cleanup typo3 folder
 for i in [os.path.join('html/cms', x) for x in ['clear.gif', 'INSTALL.txt', 'README.txt', 'RELEASE_NOTES.txt']]:
