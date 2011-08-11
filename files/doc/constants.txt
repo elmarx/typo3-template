@@ -94,7 +94,7 @@ plugin.meta {
 
 contentpage {
 	# cat=contentpage; type=int+; label= Footer source PID: Parent ID of the footer record used on content pages.
-	editableFooter = 
+	footerPid = 
 	
 	# cat=contentpage; type=int+; label= PID of the home page: PID of the home (root) page of the site.
 	homePid = 
