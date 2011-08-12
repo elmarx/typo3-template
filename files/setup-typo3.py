@@ -5,6 +5,7 @@ import re
 import subprocess
 import tempfile
 import hashlib
+import shutil
 
 TYPO3_VERSION = "4.5.4"
 TYPO3_DOWNLOAD_URL = "http://prdownloads.sourceforge.net/typo3/"
@@ -69,7 +70,7 @@ for i in [os.path.join('html/cms', x) for x in ['clear.gif', 'INSTALL.txt', 'REA
         pass
 
 try:
-    os.rename("html/cms/_.htaccess", "html/cms/.htaccess")
+    shutil.copy("html/cms/typo3_src/_.htaccess", "html/cms/.htaccess")
 except:
     pass
 
