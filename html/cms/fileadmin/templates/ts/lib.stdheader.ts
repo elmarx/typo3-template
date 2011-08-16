@@ -1,3 +1,3 @@
 lib.stdheader {
-		10.1.fontTag = <h2{register:headerStyle}{register:headerClass}>|</h2>
+		10.1.dataWrap = <h2{register:headerStyle}{register:headerClass}>|</h2>
 }
