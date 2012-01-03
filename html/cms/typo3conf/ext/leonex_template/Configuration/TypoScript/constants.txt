@@ -10,6 +10,9 @@ config {
 	
 	# cat=config; type=boolean; label=Show Page Title: Show the title of the current page as <h2> inside the template
 	showPageTitle = 1
+
+	# cat=config; type=boolean; label=Completley disable caching
+	noCache = 0
 }
 
 filepaths {
@@ -36,7 +39,7 @@ plugin.tt_news {
 	pid_list =
 	
 	# cat=plugin.tt_news; type=int+; label= singlePid: Default ID of the page containing the tt_news SINGLE-view plugin
-	singlePid =
+	singlePid = 0
 	
 	# cat=plugin.tt_news; type=int+; label= limit: Default maximum number of items to be shown in LIST-view
 	limit = 100
