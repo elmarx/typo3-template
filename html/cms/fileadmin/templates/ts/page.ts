@@ -41,11 +41,12 @@ page {
 		}
 
 		includeJSlibs {
-				jquery = {$filepaths.scripts}jquery-1.6.x.min.js
+				jquery = {$filepaths.scripts}jquery-1.7.1.min.js
 		}
 
 		includeCSS {
-				1 = {$filepaths.css}main.css
+				1 = {$filepaths.css}bootstrap.min.css
+				10 = {$filepaths.css}main.css
 		}
 
 }
@@ -53,7 +54,7 @@ page {
 [globalVar = LIT:1 = {$config.showPageTitle}]
 page.10.subparts.pagetitle = TEXT
 page.10.subparts.pagetitle.data = page : title
-page.10.subparts.pagetitle.wrap = <h2>|</h2>
+#page.10.subparts.pagetitle.wrap = <h2>|</h2>
 [global]
 
 [browser = msie]

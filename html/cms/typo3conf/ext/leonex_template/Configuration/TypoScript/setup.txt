@@ -20,4 +20,4 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/page.ajax.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/i18n.ts">
 
-config.noCache = {$config.noCache}
+config.no_cache = {$config.debug}

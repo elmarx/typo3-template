@@ -15,7 +15,6 @@ plugin.tx_automaketemplate_pi1 {
 						mainMenu = 1
 						searchForm = 1
 						pagetitle = 1
-						footer = 1
 
 						t3content = 1
 						border = 1
@@ -25,6 +24,8 @@ plugin.tx_automaketemplate_pi1 {
 
 				SPAN.id {
 				}
+
+				FOOTER.all = 1
 
 
 				H1.all = 1

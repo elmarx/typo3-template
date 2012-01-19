@@ -10,9 +10,6 @@ config {
 	
 	# cat=config; type=boolean; label=Show Page Title: Show the title of the current page as <h2> inside the template
 	showPageTitle = 1
-
-	# cat=config; type=boolean; label=Completley disable caching
-	noCache = 0
 }
 
 filepaths {
@@ -21,7 +18,7 @@ filepaths {
 	
 	# cat=filepaths; type=string; label=CSS: Location of the Cascading Style Sheets relative to site
 	css = fileadmin/templates/css/
-	
+
 	# cat=filepaths; type=string; label=Images: Location of the images relative to site
 	images = fileadmin/templates/img/
 
