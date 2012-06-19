@@ -7,7 +7,7 @@ import tempfile
 import hashlib
 import shutil
 
-TYPO3_VERSION = "4.6.3"
+TYPO3_VERSION = "4.7.1"
 TYPO3_DOWNLOAD_URL = "http://prdownloads.sourceforge.net/typo3/"
 TYPO3_X_VERSION = re.sub(r'\d+$', 'x', TYPO3_VERSION)
 GROUP = "apache"
@@ -49,7 +49,7 @@ if not os.path.isdir('html/typo3_src-%s' % (TYPO3_VERSION)):
 
 # download typo3 dummy
 if not os.path.exists('html/cms/typo3conf/localconf.php'):
-    os.system("wget -qO - %(url)s/dummy-%(version)s.tar.gz | tar xzf - -C html/cms/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
+    os.system("wget -qO - %(url)sdummy-%(version)s.tar.gz | tar xzf - -C html/cms/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # create the proper symlinks
 try:
