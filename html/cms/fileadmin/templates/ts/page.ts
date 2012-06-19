@@ -41,7 +41,7 @@ page {
 		}
 
 		includeJSlibs {
-				jquery = {$filepaths.scripts}jquery-1.7.1.min.js
+				jquery = {$filepaths.scripts}jquery.min.js
 		}
 
 		includeCSS {
