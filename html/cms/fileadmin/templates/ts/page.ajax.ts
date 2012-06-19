@@ -4,7 +4,9 @@ ajax {
 	
 	config {
 		disableAllHeaderCode = 1
+		additionalHeaders = Content-Type: application/json
 		xhtml_cleaning = 0
+		debug = 0
 	}
 	
 	10 < styles.content.get

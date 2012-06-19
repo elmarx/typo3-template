@@ -156,7 +156,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
         ),
         'preVars' =>
         array(
-            0 =>
             array(
                 'GETvar' => 'L',
                 'valueMap' =>
@@ -166,6 +165,14 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
                 ),
                 'noMatch' => 'bypass',
             ),
+	    array(
+                'GETvar' => 'type',
+                'valueMap' =>
+                array(
+                    'json' => '3'
+                ),
+                'noMatch' => 'bypass'
+            )
         ),
     ),
 );
