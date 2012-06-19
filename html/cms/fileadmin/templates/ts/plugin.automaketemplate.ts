@@ -17,15 +17,15 @@ plugin.tx_automaketemplate_pi1 {
 						pagetitle = 1
 
 						t3content = 1
-						border = 1
-						left = 1
-						right = 1
+                        claim = 1
 				}
 
 				SPAN.id {
 				}
 
-				FOOTER.all = 1
+				FOOTER.id { 
+                    footer = 1
+                }
 
 
 				H1.all = 1
