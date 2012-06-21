@@ -1,0 +1,63 @@
+#contactform .row {
+	margin-bottom: 18px;
+}
+
+#contactform input.hidden, #contactform input[type="hidden"] {
+        display: none;
+        border: none;
+}
+
+#contactform input.submit, #contactform input[type="submit"] {
+	border:1px solid #ccc;
+	width:auto;
+	display:inline;
+	clear:both;
+}
+
+#contactform fieldset, #contactform input[type="text"], #contactform textarea {
+	border:1px solid #dedede;
+		border: 1px solid #999;
+		height: 22px;
+		line-height: 20px;
+		font-weight: normal;
+		padding: 0 4px;
+		margin: 0;
+}
+
+#contactform textarea {
+		height: auto;
+}
+
+#contactform fieldset {
+	padding:30px 10px 10px 10px;
+}
+
+.error {
+	color:red;
+	font-weight:bold;
+}
+
+#contactform label {
+	display:block;
+	float:left;
+	width: 110px;
+	font-weight: bold;
+}
+
+#contactform input[type="text"], #contactform textarea {
+	display:block;
+	width: 272px;
+	float:left;
+}
+
+#contactform .clear {
+	clear:both;
+}
+
+#contactform .contexthelp {
+	border:1px solid #dedede;
+	background-color: #efefef;
+	padding:5px;
+	display:block;
+	font-size:small;
+}

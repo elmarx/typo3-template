@@ -24,6 +24,9 @@ filepaths {
 
 	# cat=filepaths; type=string; label=Scripts: Location of the Javascript files relative to site
 	scripts = fileadmin/templates/js/
+
+	# cat=filepaths; type=string; label=Forms: Location of files for configuring a formhandler form
+	form = fileadmin/templates/forms
 }
 
 plugin.tx_automaketemplate_pi1 {

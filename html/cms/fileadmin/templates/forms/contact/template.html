@@ -1,0 +1,92 @@
+<!-- ###TEMPLATE_FORM1### begin -->
+<form action="###REL_URL###" id="contactform" method="post" class="formhandler">
+		<input type="hidden" name="name" value="###name###" />
+		<input type="hidden" name="email" value="###email###" />
+
+		<p>
+###LLL:required_fields###
+</p>
+
+###field_input_name###
+###field_input_company###
+###field_input_email###
+
+###field_input_subject###
+
+        <div class="row">
+            ###error_messageBody###
+            <label for="messageBody">###LLL:messageBody### ###required_messageBody###</label>
+            <textarea rows="3" cols="40" name="contact[messageBody]" id="messageBody">###value_messageBody###</textarea>
+            <div class="clear"></div>
+        </div>
+
+        <div class="row">
+            <input type="submit" id="contactSubmit" value="###LLL:submit###" ###submit_nextStep### />
+        </div>
+</form>
+<div id="contactformFoot"></div>
+<!-- ###TEMPLATE_FORM1### end -->
+
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### begin -->
+Sehr geehrte(r) ###value_name###,
+
+Vielen Dank für ihre Nachricht. Wir werden diese schnellstmöglich bearbeiten.
+
+Folgende Daten wurden übermittelt:
+
+Name: ###value_name###
+Firma: ###value_company###
+E-Mail: ###value_email###
+Betreff: ###value_subject###
+Nachricht: ###value_messageBody###
+
+Mit freundlichen Grüßen
+<!-- ###TEMPLATE_EMAIL_USER_PLAIN### end -->
+
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### begin -->
+Hallo,
+
+Das Kontaktformular wurde mit folgenden Daten abgeschickt:
+
+Name: ###value_name###
+Firma: ###value_company###
+E-Mail: ###value_email###
+Betreff: ###value_subject###
+Nachricht: ###value_messageBody###
+
+<!-- ###TEMPLATE_EMAIL_ADMIN_PLAIN### end -->
+
+
+<!-- ###TEMPLATE_SUBMITTEDOK### begin -->
+
+<p>Vielen Dank für Ihre Anfrage.</p>
+
+<p>Die folgende Daten wurden übermittelt.</p>
+
+<table>
+	<tr>
+		<td>###LLL:name###:</td>
+		<td>###value_name###</td>
+	</tr>
+
+	<tr>
+		<td>###LLL:company###:</td>
+		<td>###value_company###</td>
+	</tr>
+
+	<tr>
+		<td>###LLL:email###:</td>
+		<td>###value_email###</td>
+	</tr>
+
+	<tr>
+		<td>###LLL:subject###:</td>
+		<td>###value_subject###</td>
+	</tr>
+
+	<tr>
+		<td>###LLL:messageBody###:</td>
+		<td>###value_messageBody###</td>
+	</tr>
+</table>
+<!-- ###TEMPLATE_SUBMITTEDOK### end -->

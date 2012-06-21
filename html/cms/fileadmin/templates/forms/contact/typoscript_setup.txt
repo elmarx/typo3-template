@@ -1,0 +1,158 @@
+##### STEP 1 CONFIGURATION #####
+plugin.Tx_Formhandler.settings.predef.contact_form.1 {
+
+	validators {
+		1 {
+			class = Tx_Formhandler_Validator_Default
+			config {
+				fieldConf {
+				  name.errorCheck.1 = required
+				  subject.errorCheck.1 = required
+				  messageBody.errorCheck.1 = required
+				  privacy.errorCheck.1 = required
+				  email {
+				    errorCheck.1 = required
+				    errorCheck.2 = email
+				    }
+				}
+			}
+		}
+	}
+}
+
+##### MAIN CONFIGURATION #####
+plugin.Tx_Formhandler.settings.predef.contact_form {
+
+	# Common configuration
+	name = Contact Form
+	debug = 0
+	addErrorAnchors = 1
+	templateFile = {$filepaths.forms}contact/template.html
+	langFile = {$filepaths.forms}contact/lang.xml
+	cssFile {
+        1 = {$filepaths.forms}contact/styles.css
+    }
+	jsFile {
+        1 = {$filepaths.forms}contact/script.js
+    }
+	formValuesPrefix = contact
+
+    # single master template
+	masterTemplateFile = {$filepaths.forms}contact/master_template.html
+
+	  # HTML wrapping by validation error
+	totalFilesMarkerTemplate {
+		totalWrap = <ul>|</ul>
+		singleWrap = <li style="color:red;">|</li>
+	}
+	singleFileMarkerTemplate {
+		totalWrap = <ul>|</ul>
+		singleWrap = <li style="color:maroon;">|</li>
+	}
+	singleErrorTemplate {
+		totalWrap = <div>|</div>
+		singleWrap = <span class="error">|</span><br />
+	}
+	errorListTemplate {
+		totalWrap = <ul>|</ul>
+		singleWrap = <li class="error">|</li>
+	}
+
+	# File processing
+	files {
+		clearTempFilesOlderThanHours = 24
+		uploadFolder = uploads/contact/tmp2/
+		enableAjaxFileRemoval = 1
+	}
+
+	# Loggers configuration
+	loggers {
+		1 {
+			class = Tx_Formhandler_Logger_DB
+		}
+	}
+
+	# Interceptors configuration
+	initInterceptors {
+		1 {
+			class = Tx_Formhandler_Interceptor_Filtreatment
+		}
+	}
+
+	# Finishers configuration
+	finishers {
+		 1 {
+			class = Tx_Formhandler_Finisher_DB
+			config {
+				table = tt_content
+				key = uid
+				fields {
+					header {
+						mapping = name
+						if_is_empty = None given
+					}
+					bodytext {
+						mapping = subject
+						separator = ,
+					}
+					hidden = 1
+					pid = 39
+					subheader.special = sub_datetime
+					crdate.special = sub_tstamp
+					tstamp.special = sub_tstamp
+					imagecaption.special = ip
+				}
+			}
+		}
+		2.class = Tx_Formhandler_Finisher_Mail
+		2.config {
+			limitMailsToUser = 5
+			admin {
+				to_email = 
+				to_name = 
+				subject = Mail aus dem Kontaktformular
+				#sender_email =
+				sender_name = name 
+				#replyto_email = email
+				#replyto_name = lastname
+				#htmlEmailAsAttachment = 1
+				#attachment = picture
+			}
+			user {
+				to_email = email
+				to_name = lastname
+				subject = Ihre Kontaktanfrage
+				sender_email = 
+				sender_name = 
+				#replyto_email = email@host.com
+				#replyto_name = TEXT
+				#replyto_name.value = Some Company
+				#htmlEmailAsAttachment = 1
+				#attachment = picture
+				#attachPDF.class = Generator_WebkitPdf
+				#attachPDF.config {
+				#  pid = 23
+				#}
+		 	}
+		}
+		3.class = Tx_Formhandler_Finisher_SubmittedOK
+		3.config {
+			returns = 1
+		#	actions {
+		#		pdf {
+		#			class = Generator_WebkitPdf
+		#			config {
+		#			  pid = 23
+		#			}
+		#		}
+		#		csv {
+		#			class = Generator_Csv
+		#			
+		#		}
+		#	}
+		}
+	}
+
+	markers {
+	}
+}

@@ -4,6 +4,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_macinasearchbox_pi1.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_ddgooglesitemap.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/plugin.tx_rlmplanguagedetection_pi1.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/forms/contact/typoscript_setup.txt">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/config.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/tt_content.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.stdheader.ts">

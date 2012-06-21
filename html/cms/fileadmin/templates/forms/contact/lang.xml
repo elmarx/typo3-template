@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="error_street_required">Street is required!</label>
+			<label index="error_firstname_required">Firstname is missing!</label>
+			<label index="error_firstname_maxLength">Firstname has to be shorter than ###value### characters!</label>
+			<label index="error_lastname_required">Lastname is missing!</label>
+			<label index="error_lastname_maxLength">Lastname has to be shorter than ###value### characters!</label>
+			<label index="error_interests_minItems">Select at least ###value### interests!</label>
+			<label index="error_interests_required">Select some interests!</label>
+			<label index="error_email_required">Enter your E-mail address!</label>
+			<label index="error_email_email">E-mail address must be valid syntax!</label>
+			<label index="error_contact_via_required">Please select how to contact You!</label>
+			<label index="required_fields">Fields marked with * are required!</label>
+		</languageKey>
+		<languageKey index="en" type="array">
+			<label index="error_street_required">Street is required!</label>
+			<label index="error_firstname_required">Firstname is missing!</label>
+			<label index="error_firstname_maxLength">Firstname has to be shorter than ###value### characters!</label>
+			<label index="error_lastname_required">Lastname is missing!</label>
+			<label index="error_lastname_maxLength">Lastname has to be shorter than ###value### characters!</label>
+			<label index="error_interests_minItems">Select at least ###value### interests!</label>
+			<label index="error_interests_required">Select some interests!</label>
+			<label index="error_email_required">Enter your E-mail address!</label>
+			<label index="error_email_email">E-mail address must be valid syntax!</label>
+			<label index="error_contact_via_required">Please select how to contact You!</label>
+			<label index="required_fields">Fields marked with * are required!</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="next">Weiter</label>
+			<label index="prev">Zurück</label>
+
+            <label index="name">Name</label>
+            <label index="prename">Vorname</label>
+            <label index="company">Firma</label>
+            <label index="zip">Postleitzahl</label>
+            <label index="town">Ort</label>
+            <label index="phone">Telefonnummer</label>
+            <label index="comment">Anmerkungen</label>
+            <label index="subject">Betreff</label>
+            <label index="messageBody">Ihre Nachricht</label>
+  
+			<label index="error_street_required">Bitte geben Sie ihre Straße an.</label>
+			<label index="error_name_required">Bitte geben Sie ihren Namen an.</label>
+			<label index="error_prename_required">Bitte geben Sie ihren Vornamen an.</label>
+			<label index="error_firstname_required">Bitte geben Sie ihren Vornamen an.</label>
+			<label index="error_zip_required">Bitte geben Sie ihre PLZ an.</label>
+			<label index="error_town_required">Bitte geben Sie ihren Ort an.</label>
+			<label index="error_phone_required">Bitte geben Sie ihre Telefonnummer an.</label>
+
+			<label index="error_firstname_required">Vorname ist nicht ausgefüllt!</label>
+			<label index="error_firstname_maxLength">Vorname muss kürzer sein als ###value### Zeichen!</label>
+			<label index="error_lastname_required">Nachname ist nicht ausgefüllt!</label>
+			<label index="error_lastname_maxLength">Nachname muss kürzer sein als ###value### Zeichen!</label>
+			<label index="error_interests_minItems">Wählen Sie mindestens ###value### Interessen!</label>
+			<label index="error_interests_required">Sie müssen Interessen angeben!</label>
+			<label index="error_privacy_required">Bitte stimmen Sie der Datenschutzerklärung zu.</label>
+			<label index="error_subject_required">Bitte wählen Sie den Betreff Ihrer Nachricht.</label>
+			<label index="error_messageBody_required">Bitte geben Sie Ihre Nachricht ein.</label>
+			<label index="error_email_required">Geben Sie bitte Ihre E-Mailadresse an.</label>
+			<label index="error_email_email">E-Mailadresse ist ungültig!</label>
+			<label index="error_contact_via_required">Bitte wählen Sie wie wir Sie kontaktieren sollen!</label>
+			<label index="required_fields">Felder, die mit einem Asterisk ("*") markiert sind, sind Pflichtfelder.</label>
+		</languageKey>
+	</data>
+</T3locallang>
