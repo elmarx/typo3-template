@@ -14,7 +14,7 @@ config {
 
 filepaths {
 	# cat=filepaths; type=string; label=HTML Templates: Location of the (X)HTML templates relative to site
-	templates = fileadmin/templates/
+	templates = fileadmin/templates/html
 	
 	# cat=filepaths; type=string; label=CSS: Location of the Cascading Style Sheets relative to site
 	css = fileadmin/templates/css/
