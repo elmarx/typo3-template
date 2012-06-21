@@ -104,6 +104,9 @@ contentpage {
 
 	# cat=contentpage; type=int+; label= PID of the contact page
 	contactPid = 
+
+    # cat=contentpage; type=int+; label= PID of the page that should be the first page when logging in
+    restrictedHomePid =
 }
 
 #plugin.backgroundimage {

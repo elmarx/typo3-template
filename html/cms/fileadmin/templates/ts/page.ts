@@ -26,10 +26,7 @@ page {
 						mainMenu < lib.mainMenu
 						searchForm < lib.searchForm
 
-						t3content < lib.content
-						border < lib.border
-						left < lib.left
-						right < lib.right
+						t3content < lib.col0
 						#footer < lib.editableFooter
 				}
 		}

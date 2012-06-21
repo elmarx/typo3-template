@@ -10,9 +10,11 @@
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.defaultMenu.ts">
 
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.mainMenu.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.languageSelection.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.columns.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.editableFooter.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.searchForm.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/lib.loginBox.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/page.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/page.ajax.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE: fileadmin/templates/ts/i18n.ts">
