@@ -161,9 +161,8 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array(
                 'valueMap' =>
                 array(
                     'de' => '0',
-                    'de' => '',
                 ),
-                'noMatch' => 'bypass',
+                valueDefault => 'de'
             ),
 	    array(
                 'GETvar' => 'type',
