@@ -3,7 +3,7 @@ config {
 		admPanel = {$config.adminPanel}
 		debug = {$config.debug}
 
-		doctype = xhtml_strict
+		doctype = html5
 
 		// Character sets
 		renderCharset = utf-8
