@@ -48,7 +48,7 @@ if not os.path.isdir('html/typo3_src-%s' % (TYPO3_VERSION)):
     os.system("wget -qO - %(url)stypo3_src-%(version)s.tar.gz | tar xzf - -C html" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # download typo3 dummy
-if not os.path.exists('html/cms/typo3conf/localconf.php'):
+if not os.path.exists('html/cms/typo3conf/LocalConfiguration.php'):
     os.system("wget -qO - %(url)sdummy-%(version)s.tar.gz | tar xzf - -C html/cms/ --strip 1" % { 'url': TYPO3_DOWNLOAD_URL, 'version': TYPO3_VERSION })
 
 # create the proper symlinks
@@ -84,7 +84,7 @@ open('html/cms/typo3conf/ENABLE_INSTALL_TOOL', 'w').close()
 
 installpw = generate_pw()
 
-replace_in_file(r"\$TYPO3_CONF_VARS\['BE'\]\['installToolPassword'\] =", "$TYPO3_CONF_VARS['BE']['installToolPassword'] = '%s';\n" % (md5(installpw)), 'html/cms/typo3conf/localconf.php')
+#replace_in_file(r"\$TYPO3_CONF_VARS\['BE'\]\['installToolPassword'\] =", "$TYPO3_CONF_VARS['BE']['installToolPassword'] = '%s';\n" % (md5(installpw)), 'html/cms/typo3conf/localconf.php')
 
 
 # todo:
