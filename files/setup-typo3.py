@@ -7,7 +7,7 @@ import tempfile
 import hashlib
 import shutil
 
-TYPO3_VERSION = "4.7.4"
+TYPO3_VERSION = "6.0.0"
 TYPO3_DOWNLOAD_URL = "http://prdownloads.sourceforge.net/typo3/"
 TYPO3_X_VERSION = re.sub(r'\d+$', 'x', TYPO3_VERSION)
 GROUP = "apache"
